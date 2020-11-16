@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +43,9 @@ INSTALLED_APPS = [
     # My app
     'Job',
     'bootstrap4',
+    # 'django_filters',
+    'contact',
+    # 'rest_framework',
 
 ]
 
