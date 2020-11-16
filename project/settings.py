@@ -41,6 +41,8 @@ INSTALLED_APPS = [
 
     # My app
     'Job',
+    'bootstrap4',
+
 ]
 
 MIDDLEWARE = [

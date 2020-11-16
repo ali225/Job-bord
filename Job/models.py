@@ -1,5 +1,7 @@
 from django.db import models
+from django.db.models.fields.related import ForeignKey
 from django.utils.text import slugify
+
 # Create your models here.
 JOB_TYPE = (
     ('Full Time', 'Full time'),
@@ -36,3 +38,21 @@ class Job(models.Model):
 
 class category(models.Model):
     name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
+class Apply(models.Model):
+    job = models.ForeignKey(
+        Job, related_name='apply_job', on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=100)
+    webiste = models.URLField()
+    cv = models.FileField(upload_to='apply/')
+    cover_letter = models.TextField(max_length=500)
+    created_at = models.DateTimeField(auto_now=True)
+
+
+def __str__(self):
+    return self.name
