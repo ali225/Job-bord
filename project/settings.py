@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     # My app
     'Job',
     'bootstrap4',
-    # 'django_filters',
+    'django_filters',
     'contact',
     # 'rest_framework',
 
