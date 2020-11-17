@@ -23,5 +23,5 @@ urlpatterns = [
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('admin/', admin.site.urls),
     path('jobs/', include('Job.urls', namespace='jobs')),
-
+    path('contact-us/', include('contact.urls', namespace='contact')),
 ]
